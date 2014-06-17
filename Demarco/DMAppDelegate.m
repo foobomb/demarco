@@ -7,15 +7,25 @@
 //
 
 #import "DMAppDelegate.h"
-
+#import "DMHomeViewController.h"
+#import "DMLandscapeNavigationController.h"
 @implementation DMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    sleep(2);
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    DMHomeViewController *homeVC = [[DMHomeViewController alloc]init];
+    DMLandscapeNavigationController *navController = [[DMLandscapeNavigationController alloc] initWithRootViewController:homeVC];
+
+    navController.navigationBarHidden = YES;
+    self.window.rootViewController = navController;
+    
+    [[UIView appearance] setTintColor:[UIColor colorWithRed:0.047 green:0.286 blue:0.322 alpha:1]];
+    [[UILabel appearance] setTintColor:[UIColor colorWithRed:0.047 green:0.286 blue:0.322 alpha:1]];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -45,5 +55,13 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+//
+//- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+//    return UIInterfaceOrientationMaskAll;
+//}
+//- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+//{
+//    return (UIInterfaceOrientationMaskLandscape);
+//}
 
 @end

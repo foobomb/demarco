@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Categories</key>
+	<string>http://www.demarcojewelry.com/productphotos/categories.json</string>
+	<key>Stores</key>
+	<string>http://www.demarcojewelry.com/store.json</string>
+	<key>Red Carpet</key>
+	<string>http://www.demarcojewelry.com/productphotos/redcarpet.json</string>
+	<key>Products</key>
+	<string>http://www.demarcojewelry.com/products.json</string>
+</dict>
+</plist>

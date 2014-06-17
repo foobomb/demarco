@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DMTryOnRingViewController">
+            <connections>
+                <outlet property="adjustmentSelector" destination="jaS-9C-ZVk" id="GW1-by-CVC"/>
+                <outlet property="handImageView" destination="dZo-cC-Ygo" id="TQ0-q7-4KG"/>
+                <outlet property="ringImageView" destination="a51-zx-Fgs" id="qDu-Qb-yfK"/>
+                <outlet property="tryOnContainerView" destination="fQ4-aB-hV7" id="Ijb-ay-DDC"/>
+                <outlet property="view" destination="iN0-l3-epB" id="VLc-PL-6Gl"/>
+            </connections>
+        </placeholder>
+        <rotationGestureRecognizer id="9YW-pW-Cyd">
+            <connections>
+                <action selector="rotationGesture:" destination="-1" id="Shs-eg-Rhq"/>
+                <outlet property="delegate" destination="-1" id="w42-UV-nGt"/>
+            </connections>
+        </rotationGestureRecognizer>
+        <pinchGestureRecognizer id="zxN-Kf-h79">
+            <connections>
+                <action selector="pinchGesture:" destination="-1" id="f98-Hb-Wvo"/>
+                <outlet property="delegate" destination="-1" id="eed-0v-lxc"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="nri-cF-LSZ">
+            <connections>
+                <action selector="panGesture:" destination="-1" id="ilH-PB-eQK"/>
+                <outlet property="delegate" destination="-1" id="S8s-fk-d0i"/>
+            </connections>
+        </panGestureRecognizer>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="fQ4-aB-hV7">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dZo-cC-Ygo">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="a51-zx-Fgs">
+                            <rect key="frame" x="462" y="225" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demarco_logo_transparent" id="8FK-EU-qGg">
+                            <rect key="frame" x="0.0" y="668" width="1024" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Q3h-vM-qgM">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <items>
+                                <barButtonItem title="Back" id="5UC-Nu-Avo">
+                                    <color key="tintColor" red="0.1098039299" green="0.28627452250000002" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <connections>
+                                        <action selector="backToDetails:" destination="-1" id="CBl-TQ-Vtp"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="pNt-1G-jqe"/>
+                                <barButtonItem title="Share" id="AAF-Ah-adA">
+                                    <color key="tintColor" red="0.1098039299" green="0.28627452250000002" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <connections>
+                                        <action selector="shareTryOn:" destination="-1" id="5sq-n6-L4W"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="b3D-DG-cKM">
+                            <rect key="frame" x="0.0" y="624" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="uKe-9T-BK0"/>
+                                <barButtonItem style="plain" id="WKL-ql-KsC">
+                                    <segmentedControl key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="jaS-9C-ZVk">
+                                        <rect key="frame" x="418" y="7" width="187" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <segments>
+                                            <segment title="Adjust Item"/>
+                                            <segment title="Adjust Image"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.1098039299" green="0.28627452250000002" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
+                                    </segmentedControl>
+                                    <color key="tintColor" red="0.1098039299" green="0.28627452250000002" blue="0.31372550129999999" alpha="1" colorSpace="deviceRGB"/>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="o2n-aW-8ji"/>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="9YW-pW-Cyd" appends="YES" id="GWe-sC-C2Y"/>
+                        <outletCollection property="gestureRecognizers" destination="zxN-Kf-h79" appends="YES" id="n49-F9-wa7"/>
+                        <outletCollection property="gestureRecognizers" destination="nri-cF-LSZ" appends="YES" id="WdR-Hk-oFc"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="demarco_logo_transparent" width="900" height="250"/>
+    </resources>
+</document>
